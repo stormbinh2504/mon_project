@@ -1,3 +1,8 @@
+@import "quanlinhanvien.css";
+@import "width.css";
+/* @import "../page/Login/login.css" */
+@import "navbar.css";
+@import "padding.css";
 /* Reset Css */
 * {
     padding: 0;
@@ -22,8 +27,12 @@ body li {
     list-style: none;
 }
 
+.font-bold{
+    font-weight: bold;
+}
+
 .color-white {
-    color: white !important;
+    color:white!important;
 }
 
 .color-black {
@@ -34,6 +43,10 @@ body li {
     margin: 0 auto;
 }
 
+.table td
+{
+    vertical-align: inherit;
+}
 .header-page {
     display: flex;
     justify-content: space-between;
@@ -46,6 +59,7 @@ body li {
 #header .logo-tlu {
     width: 100px;
     height: 80px;
+    margin:15px 0 0 15px;
 }
 
 .status-login {
@@ -62,15 +76,24 @@ body li {
     background-color: #2a3f54;
     color: white;
 }
+#drop-dannh-muc
+{
+    padding-left: 30px;
+}
 
-.menu-func li a:focus {
+#drop-dannh-muc .item-dm.active {
+    color: aqua !important;
+}
+#drop-dannh-muc .item-dm:hover {
     color: aqua !important;
 }
 
 #content .content-func {
     margin-top: 30px;
     margin-left: 50px;
-    width: 1000px;
+    width: 1160px;
+    height: 600px;
+    position: relative;
 }
 
 .content-func .header-content {
@@ -92,6 +115,10 @@ body li {
     background-color: #17a2b8;
     color: white;
 }
+.data-table table, th, td {
+  border: 1.5px solid black;
+  text-align: center;
+} 
 
 .data-table .format-sua {
     width: 40px;
@@ -104,11 +131,47 @@ body li {
 }
 
 .content-add .img-user {
-    width: 38%;
-    height: 100px;
+    width: 71%;
+    height: 160px;
     display: flex;
     justify-content: center;
     opacity: 0.5;
 }
 
+.drop-dc{
+    cursor: pointer;
+}
 
+.chinh-sua-nv{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-func .title
+{
+    padding-left: 15px;
+}
+
+.find{
+    display: flex;
+    
+}
+.img-search{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.chinhsua{
+     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#chuyentiep{
+    display: block;
+}
+
+.spanDiv {
+  padding: 10px 0px;
+  color: #bbb;
+}

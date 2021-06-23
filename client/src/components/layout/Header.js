@@ -1,8 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AppPicture from '../../assets';
+import {
+    useHistory
+} from "react-router-dom";
 
 const Header = () => {
+    let history = useHistory()
+
+    const logout = () => {
+        localStorage.removeItem("accessToken")
+        history.replace("/")
+    }
+
     return (
         <header id='header'>
             <div className='container-fluid'>
@@ -15,12 +25,11 @@ const Header = () => {
                         />
                     </Link>
                     <div className='status-login color-white'>
-                        <p>Chào Bình Huun /</p>
+                        <p>Hello/</p>
                         <span >
-                            < Link to = '/'
-                            className = "">
+                            <button onClick={logout}>
                                 logout
-                            </Link>
+                            </button> 
                         </span>
                     </div>
                 </div>
