@@ -2,7 +2,6 @@ import React, { Suspense, useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import QLCQBHapi from '../../../config/api/apiN2/QLCQBHapi';
-import { Form, FormControl } from 'react-bootstrap';
 
 export default function ModalEditCQBH(props) {
   const [show, setShow] = useState(false);

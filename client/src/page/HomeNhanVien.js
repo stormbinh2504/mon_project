@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/layout/Header';
+import Header from "../components/layout/header/HeaderNV";
 import Sidebartruongphong from '../components/layout/Sidebartruongphong';
 import NDTrangChu from './TrangChu/NDTrangChu';
 import Sidebarnhanvien from '../components/layout/Sidebarnhanvien';

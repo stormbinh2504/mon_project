@@ -1,15 +1,9 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, {useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
 
-import AvatarUser from '../../../assets/icons/user-circle-regular.svg';
-
-import QLNVapi from "../../../config/api/QLNVapi";
-import QLBPapi from "../../../config/api/QLBPapi";
 import QLVBDVTapi from "../../../config/api/apiN2/QLVBDVTapi";
-import QLLVBapi from "../../../config/api/apiN2/QLLVBapi";
-import QLCQBHapi from "../../../config/api/apiN2/QLCQBHapi";
 
 export default function ModalShowVBDVT(props) {
   const [show, setShow] = useState(false);
@@ -45,7 +39,7 @@ export default function ModalShowVBDVT(props) {
     const res = await QLVBDVTapi.put(props.id,{
       "tenVanBan": tvb,
       "soKyHieu": skh,
-      "trangThai": "Đã xử lí",
+      "trangThai": "Đang xử lí",
       "trangThaiLanhDao": trangThaiLanhDao,
       "taiLieu": taiLieu,
       "baoCaoLanhDao": " ",
@@ -137,7 +131,7 @@ export default function ModalShowVBDVT(props) {
         </Modal.Body>
         <Modal.Footer> 
           {
-            trangThai =="Đã xử lí" ? TrangThai() : TrangThai2()
+            trangThai =="Đang xử lí" ? TrangThai() : TrangThai2()
           }
         </Modal.Footer>
       </Modal>

@@ -2,13 +2,10 @@ import React, { Suspense, useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-import AvatarUser from '../../../assets/icons/user-circle-regular.svg';
 import QLBPapi from "../../../config/api/QLBPapi";
 import QLCDapi from "../../../config/api/QLCDapi";
 import QLNVapi from "../../../config/api/QLNVapi";
 import QLVBDCTapi from "../../../config/api/apiN2/QLVBDVTapi";
-import QLCQBHapi from "../../../config/api/apiN2/QLCQBHapi";
-import QLLVBapi from "../../../config/api/apiN2/QLLVBapi";
 
 export default function ModalEditVBDLD(props) {
   const [show, setShow] = useState(false);

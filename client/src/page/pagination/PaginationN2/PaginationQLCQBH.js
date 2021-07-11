@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../pagination/pagination.css";
 import ModalEditCQBH from "../../modals/ModalN2/ModalEditCQBH";
-import QLBPapi from "../../../config/api/QLBPapi";
 import QLCQBHapi from "../../../config/api/apiN2/QLCQBHapi";
 import Narbar from "../../../components/layout/Navbar"
 import { Form, FormControl,Table, Pagination } from 'react-bootstrap';

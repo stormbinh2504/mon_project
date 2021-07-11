@@ -3,9 +3,6 @@ import "../../pagination/pagination.css";
 import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
 import IconSearch from '../../../assets/icons/search-icon.svg';
 import QLVBDVTapi from "../../../config/api/apiN2/QLVBDVTapi";
-import ModalAddVBDVT from "../../modals/ModalN2/ModalAddVBDVT";
-import ModalEditVBDLD from "../../modals/ModalN2/ModalEditVBDLD";
-import { Link } from 'react-router-dom';
 
 import ModalShowVBDLD from "../../modals/ModalN2/ModalShowVBDLD";
 
@@ -13,7 +10,7 @@ function PaginationQLVBDLD(props) {
   const [vanbandenId, setvanbandenId] = useState([]);
   const [rerent, setrerent] = useState(false);
 
-  const [search, setSearch] = useState("Đã xử lí");
+  const [search, setSearch] = useState("Đang xử lí");
   const [filterTenVanBanDen, setfilterTenVanBanDen] = useState([]);
 
   const [filterTrangThai, setfilterTrangThai] = useState([]);
@@ -126,7 +123,7 @@ const renderData = (currentItems) => {
           <td>{index + 1}</td>
           <td>{item.tenVanBan}</td>
           <td>{item.soKyHieu}</td>
-          <td>{item.ngayDen}</td>
+          <td>{item.ngayDen.split("T")[0]}</td>
           <td>{item.coQuanBanNganhId.tenCoQuan}</td>
           <td>{item.trangThaiLanhDao}</td>
           {/* <td>

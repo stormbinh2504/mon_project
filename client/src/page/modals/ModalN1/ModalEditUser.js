@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-import AvatarUser from '../../../assets/icons/user-circle-regular.svg';
+
 import QLNVapi from '../../../config/api/QLNVapi';
 import QLNQapi from '../../../config/api/QLNQapi';
 import QLNDapi from '../../../config/api/QLNDapi';
@@ -99,20 +99,25 @@ export default function ModalEditUser(props) {
         Sửa
       </Button>
       <Button variant="danger" onClick={deleteEmp}>
-            Xóa
+        Xóa
       </Button>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton >
-          <Modal.Title>Sửa nhân viên</Modal.Title>
+        <Modal.Header closeButton>
+          <Modal.Title>Sửa người dùng</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <div className = "content-add">
-                <div className = "modal1">
-{/* Mã nhân viên */}
-                <div className="input-add">
-                <label htmlFor="bophan" className="input-label font-bold">Mã nhân viên</label>
+          <div className="content-add">
+            <div className="modal1">
+              {/* Mã nhân viên */}
+              <div className="input-add">
+                <label
+                  htmlFor="bophan"
+                  className="input-label font-bold width-180px"
+                >
+                  Mã nhân viên:
+                </label>
                 <select
-                  className = "input-select"
+                  className="input-select"
                   id="manhanvien"
                   name="manhanvien"
                   value={data}
@@ -120,19 +125,24 @@ export default function ModalEditUser(props) {
                     setdata(e.target.value);
                   }}
                 >
-                {/* <option value={data}>{data}</option> */}
+                  {/* <option value={data}>{data}</option> */}
                   {mnv.map((item, index) => (
-                    <option  value={item._id}>{item.maNhanVien}</option>
+                    <option value={item._id}>{item.maNhanVien}</option>
                   ))}
                 </select>
               </div>
-{/* Tên nhân viên */}
-                <div className="input-add">
-                <label htmlFor="chucvu" className="input-label font-bold">Tên nhân viên</label>
+              {/* Tên nhân viên */}
+              <div className="input-add">
+                <label
+                  htmlFor="chucvu"
+                  className="input-label font-bold width-180px"
+                >
+                  Tên nhân viên:
+                </label>
                 <select
-                className = "input-select"
+                  className="input-select"
                   id="tennhanvien"
-                  name = "tennhanvien"
+                  name="tennhanvien"
                   value={data2}
                   onChange={(e) => {
                     setdata2(e.target.value);
@@ -140,17 +150,22 @@ export default function ModalEditUser(props) {
                 >
                   {/* <option value={data2}>{data2}</option> */}
                   {tnv.map((item, index) => (
-                    <option  value={item._id}>{item.tenNhanVien}</option>
+                    <option value={item._id}>{item.tenNhanVien}</option>
                   ))}
                 </select>
-                </div>
-{/* Tên nhóm quyền */}
-                <div className="input-add">
-                <label htmlFor="chucvu" className="input-label font-bold">Tên nhóm quyền</label>
+              </div>
+              {/* Tên nhóm quyền */}
+              <div className="input-add">
+                <label
+                  htmlFor="chucvu"
+                  className="input-label font-bold width-180px"
+                >
+                  Tên nhóm quyền:
+                </label>
                 <select
-                className = "input-select"
+                  className="input-select"
                   id="tennhomquyen"
-                  name = "tennhomquyen"
+                  name="tennhomquyen"
                   value={data3}
                   onChange={(e) => {
                     setdata3(e.target.value);
@@ -158,24 +173,41 @@ export default function ModalEditUser(props) {
                 >
                   {/* <option value={data3}>{data3}</option> */}
                   {tnq.map((item, index) => (
-                    <option  value={item._id}>{item.tenNhomQuyen}</option>
+                    <option value={item._id}>{item.tenNhomQuyen}</option>
                   ))}
                 </select>
-
-                </div>
-                  <div className="input-add">
-                      <label for="msv" className="input-label font-bold">username:</label>
-                      <input type="text" value={username} onChange={(e) =>{setusername(e.target.value)}}></input>
-                  </div>
-                  <div className="input-add">
-                      <label for="tennv" className="input-label font-bold" >password:</label>
-                      <input type="text" value={password} onChange={(e) => {setpassword(e.target.value)}}/>
-                  </div>
+              </div>
+              <div className="input-add">
+                <label for="msv" className="input-label font-bold width-180px">
+                  username:
+                </label>
+                <input
+                  type="text"
+                  value={username}
+                  onChange={(e) => {
+                    setusername(e.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="input-add">
+                <label
+                  for="tennv"
+                  className="input-label font-bold width-180px"
+                >
+                  password:
+                </label>
+                <input
+                  type="text"
+                  value={password}
+                  onChange={(e) => {
+                    setpassword(e.target.value);
+                  }}
+                />
               </div>
             </div>
+          </div>
         </Modal.Body>
         <Modal.Footer>
-          
           <Button variant="primary" onClick={updateEmp}>
             Lưu
           </Button>

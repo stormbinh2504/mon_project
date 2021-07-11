@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Buffer from "../../assets/icons/buffer-brands.svg";
+import Calendar from "../../assets/icons/calendar.svg";
 
 function Drop_Danh_Muc() {
     var x = document.getElementById("drop-dannh-muc");
@@ -31,40 +33,52 @@ function Drop_Van_Ban_Den() {
 
 const Sidebarnhanvien = () => {
     return (
-        <div className='menu-func col-left' style={{ width: '250px', height: '750px' }}>
-            <div className="warp-dm">
-            <h6 className='title font-bold'  style={{ paddingTop: '20px' }}>
-                <Link to='/nhanvien' className='color-white'>
-                    TRANG CHỦ
-                </Link>
-            </h6>
-            <h6 className='title font-bold'>
-                DANH MỤC CHỨC NĂNG
-            </h6>
-{/* Văn bản đến */}
-            <h6 className='title font-bold drop-dc' onClick={Drop_Van_Ban_Den}>
-                Văn bản đến
-            </h6>
-            <ul className='sub-menu' id="drop-vanbanden" >   
-                <li>
-                    <Link className='color-white item-dm pd-left-20' to='nhanvien/quanlyvanbandennhanvien'>
-                        Quản lý văn bản đến 
-                    </Link>
-                </li>
-                <li>
-                    <Link className='color-white item-dm pd-left-20' to='nhanvien/quanlycongviecnhanvien'>
-                        Quản lý CV văn bản đến 
-                    </Link>
-                </li>
-                <li>
-                    <Link className='color-white item-dm pd-left-20' to='nhanvien/baocaothongkenhanvien'>
-                        Báo cáo văn bản đến
-                    </Link>
-                </li>
-            </ul>
+      <div
+        className="menu-func col-left"
+        style={{ width: "250px", height: "750px" }}
+      >
+        <div className="warp-dm">
+          <h6 className="title font-bold" style={{ paddingTop: "20px" }}>
+            <Link to="/nhanvien" className="color-white">
+              TRANG CHỦ
+            </Link>
+          </h6>
+          <h6 className="title font-bold">DANH MỤC CHỨC NĂNG</h6>
+          {/* Văn bản đến */}
+          <h6 className="title font-bold drop-dc" onClick={Drop_Van_Ban_Den}>
+            Văn bản đến
+          </h6>
+          <ul className="sub-menu" id="drop-vanbanden">
+            <li class="lst-item">
+              <Link
+                className="color-white item-dm pd-left-20"
+                to="nhanvien/quanlyvanbandennhanvien"
+              >
+                Quản lý văn bản đến
+                <img className="icon-buffer" src={Buffer} alt="" />
+              </Link>
+            </li>
+            <li class="lst-item">
+              <Link
+                className="color-white item-dm pd-left-20"
+                to="nhanvien/quanlycongviecnhanvien"
+              >
+                Quản lý CV văn bản đến
+                <img className="icon-buffer" src={Buffer} alt="" />
+              </Link>
+            </li>
+            <li class="lst-item">
+              <Link
+                className="color-white item-dm pd-left-20"
+                to="nhanvien/baocaothongkenhanvien"
+              >
+                Báo cáo văn bản đến
+                <img className="icon-buffer" src={Calendar} alt="" />
+              </Link>
+            </li>
+          </ul>
         </div>
-            </div>
-
+      </div>
     );
 };
 

@@ -64,7 +64,14 @@ body li {
 
 .status-login {
     display: flex;
-    margin-right: 30px;
+    margin-right: 60px;
+}
+
+.status-login p:nth-child(2)
+{
+    color: rgb(238, 255, 0);
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 #content {
@@ -76,15 +83,24 @@ body li {
     background-color: #2a3f54;
     color: white;
 }
-#drop-dannh-muc
+/* #drop-dannh-muc
 {
+    padding-left: 30px;
+} */
+
+.warp-dm{
+    width: 250px;
+}
+
+.item-dm {
     padding-left: 30px;
 }
 
-#drop-dannh-muc .item-dm.active {
+.item-dm:focus {
     color: aqua !important;
 }
-#drop-dannh-muc .item-dm:hover {
+
+.item-dm:hover {
     color: aqua !important;
 }
 
@@ -150,6 +166,7 @@ body li {
 .menu-func .title
 {
     padding-left: 15px;
+    position: relative;
 }
 
 .find{
@@ -174,4 +191,44 @@ body li {
 .spanDiv {
   padding: 10px 0px;
   color: #bbb;
+}
+
+
+.icon-arrow{
+    position: absolute;
+    top: 2%;
+    right:10%;
+    width: 12px;
+}
+
+.lst-item{
+    position: relative;
+}
+
+.icon-buffer{
+    position: absolute;
+    top: 20%;
+    left:2%;
+    width: 15px;
+}
+
+.icon-logout{
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 2%;
+    width: 20px;
+}
+
+/* Chart */
+.char-bar{
+    margin: 100px 0 100px 200px;
+    padding: 0 0 100px 0;
+}
+
+#charbar-vt{
+    display: none;
+}
+#charbar-ld{
+    display: none;
 }

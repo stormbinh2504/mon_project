@@ -3,7 +3,6 @@ import "../../pagination/pagination.css";
 import ModalEditPosition from "../../modals/ModalN1/ModalEditPosition";
 import QLCDapi from "../../../config/api/QLCDapi";
 import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
-import ModalAddDepartment from "../../modals/ModalN1/ModalAddDepartment";
 import IconSearch from '../../../assets/icons/search-icon.svg';
 import ModalAddPosition from "../../modals/ModalN1/ModalAddPosition";
 
@@ -48,7 +47,7 @@ function PaginationQLCD(props) {
   }, [search, chucdanhId]);
 
   const [currentPage, setcurrentPage] = useState(1);
-  const [itemsPerPage, setitemsPerPage] = useState(5);
+  const [itemsPerPage, setitemsPerPage] = useState(7);
 
   const [pageNumberLimit, setpageNumberLimit] = useState(5);
   const [maxPageNumberLimit, setmaxPageNumberLimit] = useState(5);

@@ -50,26 +50,47 @@ export default function ModalAddRole(props) {
           <Modal.Title>Thêm nhóm quyền</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <div className = "content-add">
-                <div className = "modal1">
-                    <div className="input-add">
-                        <label htmlFor="msv" className="input-label font-bold">Mã nhóm quyền:</label>
-                        <input type="text" value ={mnq} onChange={(e)=>{setmnq(e.target.value)}}/>
-                    </div>
-                    <div className="input-add">
-                        <label htmlFor="tennv" className="input-label font-bold">Tên nhóm quyền:</label>
-                        <input type="text" value={tnq} onChange={(e)=>{settnq(e.target.value)}}/>
-                    </div>
+          <div className="content-add">
+            <div className="modal1">
+              <div className="input-add">
+                <label
+                  htmlFor="msv"
+                  className="input-label font-bold width-180px"
+                >
+                  Mã nhóm quyền:
+                </label>
+                <input
+                  type="text"
+                  value={mnq}
+                  onChange={(e) => {
+                    setmnq(e.target.value);
+                  }}
+                />
+              </div>
+              <div className="input-add">
+                <label
+                  htmlFor="tennv"
+                  className="input-label font-bold width-180px"
+                >
+                  Tên nhóm quyền:
+                </label>
+                <input
+                  type="text"
+                  value={tnq}
+                  onChange={(e) => {
+                    settnq(e.target.value);
+                  }}
+                />
+              </div>
 
-                  <div className = "input-add">
+              {/* <div className = "input-add">
                       <label htmlFor="bophan" className="input-label font-bold">Các chức năng: </label>
                       <Form.Control as="textarea" rows={3} style={{width:"125%"}}
                       value={mota} onChange={(e) => {setmota(e.target.value)}}
                       />
-                  </div>
-                  
-               </div>  
-            </div>  
+                  </div> */}
+            </div>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

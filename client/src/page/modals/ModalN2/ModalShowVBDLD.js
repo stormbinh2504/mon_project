@@ -5,13 +5,9 @@ import { Link } from 'react-router-dom';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import AvatarUser from '../../../assets/icons/user-circle-regular.svg';
-
 import QLNVapi from "../../../config/api/QLNVapi";
 import QLBPapi from "../../../config/api/QLBPapi";
 import QLVBDVTapi from "../../../config/api/apiN2/QLVBDVTapi";
-import QLLVBapi from "../../../config/api/apiN2/QLLVBapi";
-import QLCQBHapi from "../../../config/api/apiN2/QLCQBHapi";
 import QLCVLDapi from "../../../config/api/apiN2/QLCVLDapi";
 
 export default function ModalShowVBDLD(props) {
@@ -111,8 +107,8 @@ export default function ModalShowVBDLD(props) {
     const res = await QLVBDVTapi.put(props.id, {
       "tenVanBan": tvb,
       "soKyHieu": skh,
-      "trangThai": "Đã xử lí",
-      "trangThaiLanhDao": "Đã xử lí",
+      "trangThai": "Đang xử lí",
+      "trangThaiLanhDao": "Đang xử lí",
       "taiLieu": taiLieu,
       "baoCaoLanhDao": "",
       "boPhanId": idtbp,

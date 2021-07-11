@@ -106,7 +106,7 @@ export default function ModalEditRole(props) {
                 />
               </div>
 
-              <div className="input-add">
+              {/* <div className="input-add">
                 <label htmlFor="bophan" className="input-label font-bold">
                   Các chức năng
                 </label>
@@ -119,7 +119,7 @@ export default function ModalEditRole(props) {
                     setmota(e.target.value);
                   }}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </Modal.Body>

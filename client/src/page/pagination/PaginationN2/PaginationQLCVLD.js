@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import IconSearch from '../../../assets/icons/search-icon.svg';
 import QLVBDVTapi from "../../../config/api/apiN2/QLVBDVTapi";
 import QLCVLDapi from "../../../config/api/apiN2/QLCVLDapi";
-import ModalAddVBDVT from "../../modals/ModalN2/ModalAddVBDVT";
-import ModalEditVBDLD from "../../modals/ModalN2/ModalEditVBDLD";
 
 import ModalShowDuyetBCLD from "../../modals/ModalN2/ModalShowDuyetBCLD";
 
@@ -130,7 +128,7 @@ function PaginationQLCVLD(props) {
 const renderData = (currentItems) => {
   return (
     <>
-      {currentItems.map((item,index) => (
+      {currentItems.map((item, index) => (
         <tr>
           <td>{index + 1}</td>
           <td>{item.noiDungYeuCau}</td>
@@ -142,7 +140,7 @@ const renderData = (currentItems) => {
           </td> */}
           <td>{item.nhanVienId.tenNhanVien}</td>
           {/* <td>{item.yKienLanhDao}</td> */}
-          <td>{item.thoiHanXuLi}</td>
+          <td>{item.thoiHanXuLi.split("T")[0]}</td>
           <td>{item.trangThaiLanhDao}</td>
           <td>
             <Link>{item.baoCaoTruongPhong} </Link>
@@ -150,33 +148,28 @@ const renderData = (currentItems) => {
           <td>
             <div className="chinh-sua-nv chinhsua">
               <ModalShowDuyetBCLD
-              index={index} 
-              id={item._id} 
-              deleteemp={deleteemp} 
-              updatedata = {updatedata}
-            
-              
-              noiDungYeuCau = {item.noiDungYeuCau}
-              yKienLanhDao = {item.yKienLanhDao}
-              thoiHanXuLi = {item.thoiHanXuLi}
-              trangThaiTruongPhong = {item.trangThaiTruongPhong}
-              trangThaiLanhDao = {item.trangThaiLanhDao}
-              baoCaoTruongPhong={item.baoCaoTruongPhong}
-
-              tenVanBan = {item.vanBanDenId.tenVanBan}
-              taiLieu = {item.vanBanDenId.taiLieu}
-              tenNhanVien = {item.nhanVienId.tenNhanVien}
-              tenBoPhan = {item.boPhanId.tenBoPhan}
-
-              vanBanDenId = {item.vanBanDenId}
-              nhanVienId = {item.nhanVienId}
-              boPhanId = {item.boPhanId}
-              >
-              </ModalShowDuyetBCLD>
+                index={index}
+                id={item._id}
+                deleteemp={deleteemp}
+                updatedata={updatedata}
+                noiDungYeuCau={item.noiDungYeuCau}
+                yKienLanhDao={item.yKienLanhDao}
+                thoiHanXuLi={item.thoiHanXuLi.split("T")[0]}
+                trangThaiTruongPhong={item.trangThaiTruongPhong}
+                trangThaiLanhDao={item.trangThaiLanhDao}
+                baoCaoTruongPhong={item.baoCaoTruongPhong}
+                tenVanBan={item.vanBanDenId.tenVanBan}
+                taiLieu={item.vanBanDenId.taiLieu}
+                tenNhanVien={item.nhanVienId.tenNhanVien}
+                tenBoPhan={item.boPhanId.tenBoPhan}
+                vanBanDenId={item.vanBanDenId}
+                nhanVienId={item.nhanVienId}
+                boPhanId={item.boPhanId}
+              ></ModalShowDuyetBCLD>
             </div>
           </td>
         </tr>
-      ))}  
+      ))}
     </>
   );
 };

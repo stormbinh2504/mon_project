@@ -4,14 +4,8 @@ import React, {
     useState
 } from 'react';
 
-import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
-import Header from '../../components/layout/Header';
-import Sidebar from '../../components/layout/Sidebar';
-import ModalAddDepartment from '../modals/ModalN1/ModalAddDepartment';
-import ModalEditDepartment from '../modals/ModalN1/ModalEditDepartment';
-import QLBPapi from '../../config/api/QLBPapi';
+import Header from "../../components/layout/header/HeaderVT";
 import QLCQBHapi from '../../config/api/apiN2/QLCQBHapi'
-import PaginationQLBP from '../pagination/PaginationN1/PaginationQLBP';
 import PaginationQLCQBH from '../pagination/PaginationN2/PaginationQLCQBH';
 import Sidebarvanthu from '../../components/layout/Sidebarvanthu';
 

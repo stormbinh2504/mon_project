@@ -1,15 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { Form, FormControl,Table } from 'react-bootstrap';
-import Header from "../../components/layout/Header";
+import Header from "../../components/layout/header/Header";
 import Sidebar from "../../components/layout/Sidebar";
 import QLNDapi from "../../config/api/QLNVapi";
-import ModalEditEmployee from "../modals/ModalN1/ModalEditEmployee";
-import ModalAddEmployee from "../modals/ModalN1/ModalAddEmployee";
-import axios from "axios";
-import { Link } from 'react-router-dom';
-import ModalShowEmployee from "../modals/ModalN1/ModalShowEmployee";
-// import IconSearch from '../assets/icons/search-icon.svg';
-import PaginationQLNV from "../pagination/PaginationN1/PaginationQLNV";
 import PaginationQLND from "../pagination/PaginationN1/PaginationQLND";
 
 

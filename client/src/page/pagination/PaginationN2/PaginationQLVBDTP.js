@@ -3,11 +3,7 @@ import "../../pagination/pagination.css";
 import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
 import IconSearch from '../../../assets/icons/search-icon.svg';
 import QLCVLDapi from "../../../config/api/apiN2/QLCVLDapi";
-import ModalAddVBDVT from "../../modals/ModalN2/ModalAddVBDVT";
-import ModalEditVBDLD from "../../modals/ModalN2/ModalEditVBDLD";
-import ModalShowVBDLD from "../../modals/ModalN2/ModalShowVBDLD";
 import ModalShowVBDTP from "../../modals/ModalN2/ModalShowVBDTP";
-import { Link } from 'react-router-dom';
 
 function PaginationQLVBDTP(props) {
   const [congvieclanhdaoId, setcongvieclanhdaoId] = useState([]);
@@ -114,12 +110,12 @@ function PaginationQLVBDTP(props) {
 const renderData = (currentItems) => {
   return (
     <>
-      {currentItems.map((item,index) => (
+      {currentItems.map((item, index) => (
         <tr>
-          <td>{index+1}</td>
+          <td>{index + 1}</td>
           <td>{item.vanBanDenId.tenVanBan}</td>
           <td>{item.vanBanDenId.soKyHieu}</td>
-          <td>{item.vanBanDenId.ngayDen}</td>
+          <td>{item.vanBanDenId.ngayDen.split("T")[0]}</td>
           {/* <td>{item.coQuanBanNganhId.tenCoQuan}</td> */}
           {/* <td>{item.noiDungYeuCau}</td> */}
           {/* <td>
@@ -136,27 +132,23 @@ const renderData = (currentItems) => {
           <td>
             <div className="chinh-sua-nv chinhsua">
               <ModalShowVBDTP
-              index={index} 
-              id={item._id} 
-              updatedata = {updatedata}
-          
-              noiDungYeuCau = {item.noiDungYeuCau}
-              yKienLanhDao = {item.yKienLanhDao}
-              thoiHanXuLi = {item.thoiHanXuLi}
-              trangThaiTruongPhong = {item.trangThaiTruongPhong}
-              trangThaiLanhDao = {item.trangThaiLanhDao}
-              baoCaoTruongPhong={item.baoCaoTruongPhong}
-
-              tenVanBan = {item.vanBanDenId.tenVanBan}
-              taiLieu = {item.vanBanDenId.taiLieu}
-              tenNhanVien = {item.nhanVienId.tenNhanVien}
-              tenBoPhan = {item.boPhanId.tenBoPhan}
-
-              vanBanDenId = {item.vanBanDenId}
-              nhanVienId = {item.nhanVienId}
-              boPhanId = {item.boPhanId}
-              >
-              </ModalShowVBDTP>
+                index={index}
+                id={item._id}
+                updatedata={updatedata}
+                noiDungYeuCau={item.noiDungYeuCau}
+                yKienLanhDao={item.yKienLanhDao}
+                thoiHanXuLi={item.thoiHanXuLi.split("T")[0]}
+                trangThaiTruongPhong={item.trangThaiTruongPhong}
+                trangThaiLanhDao={item.trangThaiLanhDao}
+                baoCaoTruongPhong={item.baoCaoTruongPhong}
+                tenVanBan={item.vanBanDenId.tenVanBan}
+                taiLieu={item.vanBanDenId.taiLieu}
+                tenNhanVien={item.nhanVienId.tenNhanVien}
+                tenBoPhan={item.boPhanId.tenBoPhan}
+                vanBanDenId={item.vanBanDenId}
+                nhanVienId={item.nhanVienId}
+                boPhanId={item.boPhanId}
+              ></ModalShowVBDTP>
             </div>
           </td>
           {/* <td>
@@ -171,7 +163,7 @@ const renderData = (currentItems) => {
             </div>
           </td> */}
         </tr>
-      ))}  
+      ))}
     </>
   );
 };

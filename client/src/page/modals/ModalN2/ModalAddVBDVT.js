@@ -113,7 +113,7 @@ const [nhanvienId, setnhanvienId] = useState([]);
     const res = await QLVBDVTapi.post({
       "tenVanBan": tvb,
       "soKyHieu": skh,
-      "trangThai": "Đã xử lí",
+      "trangThai": "Đang xử lí",
       "trangThaiLanhDao": trangThaiLanhDao,
       "taiLieu": taiLieu.name,
       "baoCaoLanhDao": " ",

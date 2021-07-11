@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../../pagination/pagination.css";
 import ModalEditLVB from "../../modals/ModalN2/ModalEditLVB";
-import QLBPapi from "../../../config/api/QLBPapi";
 import QLLVBapi from "../../../config/api/apiN2/QLLVBapi";
-import Narbar from "../../../components/layout/Navbar"
 import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
 import ModalAddLVB from "../../modals/ModalN2/ModalAddLVB";
 import IconSearch from '../../../assets/icons/search-icon.svg';

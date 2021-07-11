@@ -3,11 +3,7 @@ import "../../pagination/pagination.css";
 import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
 import IconSearch from '../../../assets/icons/search-icon.svg';
 import QLCVLDapi from "../../../config/api/apiN2/QLCVLDapi";
-import ModalAddVBDVT from "../../modals/ModalN2/ModalAddVBDVT";
-import ModalEditVBDLD from "../../modals/ModalN2/ModalEditVBDLD";
 import ModalShowVBDNV from "../../modals/ModalN2/ModalShowVBDNV";
-import ModalShowVBDTP from "../../modals/ModalN2/ModalShowVBDTP";
-import { Link } from 'react-router-dom';
 
 function PaginationQLVBDNV(props) {
   const [congvieclanhdaoId, setcongvieclanhdaoId] = useState([]);

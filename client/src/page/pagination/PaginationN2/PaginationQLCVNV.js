@@ -3,12 +3,6 @@ import "../../pagination/pagination.css";
 import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
 import IconSearch from '../../../assets/icons/search-icon.svg';
 import QLCVTPapi from "../../../config/api/apiN2/QLCVTPapi";
-import ModalAddVBDVT from "../../modals/ModalN2/ModalAddVBDVT";
-import ModalEditVBDLD from "../../modals/ModalN2/ModalEditVBDLD";
-import ModalShowVBDLD from "../../modals/ModalN2/ModalShowVBDLD";
-import ModalShowVBDTP from "../../modals/ModalN2/ModalShowVBDTP";
-import { Link } from 'react-router-dom';
-import ModalShowVBDNV from "../../modals/ModalN2/ModalShowVBDNV";
 import ModalAddBaoCaoNV from "../../modals/ModalN2/ModalAddBaoCaoNV";
 
 function PaginationQLCVNV(props) {

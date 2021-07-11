@@ -3,12 +3,7 @@ import React, {
     useEffect,
     useState
 } from 'react';
-
-import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
-import Header from '../../components/layout/Header';
-import Sidebar from '../../components/layout/Sidebar';
-import ModalAddDepartment from '../modals/ModalN1/ModalAddDepartment';
-import ModalEditDepartment from '../modals/ModalN1/ModalEditDepartment';
+import Header from "../../components/layout/header/HeaderVT";
 import QLLVBapi from '../../config/api/apiN2/QLLVBapi';
 import PaginationQLLVB from '../pagination/PaginationN2/PaginationQLLVB';
 import Sidebarvanthu from '../../components/layout/Sidebarvanthu';

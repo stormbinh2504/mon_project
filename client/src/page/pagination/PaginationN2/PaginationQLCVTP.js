@@ -5,8 +5,6 @@ import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
 import IconSearch from '../../../assets/icons/search-icon.svg';
 import QLVBDVTapi from "../../../config/api/apiN2/QLVBDVTapi";
 import QLCVTPapi from "../../../config/api/apiN2/QLCVTPapi";
-import ModalAddVBDVT from "../../modals/ModalN2/ModalAddVBDVT";
-import ModalEditVBDLD from "../../modals/ModalN2/ModalEditVBDLD";
 
 import ModalShowDuyetBCTP from "../../modals/ModalN2/ModalShowDuyetBCTP";
 
@@ -130,47 +128,40 @@ function PaginationQLCVTP(props) {
 const renderData = (currentItems) => {
   return (
     <>
-      {currentItems.map((item,index) => (
+      {currentItems.map((item, index) => (
         <tr>
           <td>{index + 1}</td>
           <td>{item.noiDungCongViec}</td>
           <td>{item.nhanVienId.tenNhanVien}</td>
-          <td>{item.thoiHan}</td>
+          <td>{item.thoiHan.split("T")[0]}</td>
           <td>{item.congViecLanhDaoId.yKienLanhDao}</td>
           <td>{item.trangThaiNhanVien}</td>
           <td>
-            <Link>
-                {item.baoCaoNhanVien}
-            </Link>
+            <Link>{item.baoCaoNhanVien}</Link>
           </td>
           <td>
             <div className="chinh-sua-nv chinhsua">
               <ModalShowDuyetBCTP
-              index={index} 
-              id={item._id} 
-              deleteemp={deleteemp} 
-              updatedata = {updatedata}
-            
-              
-              noiDungCongViec = {item.noiDungCongViec}
-              yKienTruongPhong = {item.yKienTruongPhong}
-              thoiHan = {item.thoiHan}
-              yKienTruongPhong = {item.yKienTruongPhong}
-              trangThaiNhanVien = {item.trangThaiNhanVien}
-              baoCaoNhanVien={item.baoCaoNhanVien}
-
-              tenNhanVien = {item.nhanVienId.tenNhanVien}
-              tenBoPhan = {item.boPhanId.tenBoPhan}
-
-              congViecLanhDaoId = {item.congViecLanhDaoId}
-              nhanVienId = {item.nhanVienId}
-              boPhanId = {item.boPhanId}
-              >
-              </ModalShowDuyetBCTP>
+                index={index}
+                id={item._id}
+                deleteemp={deleteemp}
+                updatedata={updatedata}
+                noiDungCongViec={item.noiDungCongViec}
+                yKienTruongPhong={item.yKienTruongPhong}
+                thoiHan={item.thoiHan.split("T")[0]}
+                yKienTruongPhong={item.yKienTruongPhong}
+                trangThaiNhanVien={item.trangThaiNhanVien}
+                baoCaoNhanVien={item.baoCaoNhanVien}
+                tenNhanVien={item.nhanVienId.tenNhanVien}
+                tenBoPhan={item.boPhanId.tenBoPhan}
+                congViecLanhDaoId={item.congViecLanhDaoId}
+                nhanVienId={item.nhanVienId}
+                boPhanId={item.boPhanId}
+              ></ModalShowDuyetBCTP>
             </div>
           </td>
         </tr>
-      ))}  
+      ))}
     </>
   );
 };
@@ -192,10 +183,10 @@ const renderData = (currentItems) => {
                 <tr>
                   <th>STT</th>
                   <th>Nội dung yêu cầu</th>
-                  <th>Cán bộ xử lí</th>
+                  <th>Nhân viên xử lí</th>
                   <th>Thời hạn xử lí</th>
                   <th>Ý kiến lãnh đạo</th>
-                  <th>Trạng thái nhân viên</th>
+                  <th>Trạng thái</th>
                   <th>Báo cáo nhân viên</th>
                   <th>Duyệt</th>
                 </tr>

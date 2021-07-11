@@ -6,12 +6,9 @@ import React, {
 
 // import IconSearch from '../assets/icons/search-icon.svg';
 import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
-import Header from '../../components/layout/Header';
+import Header from "../../components/layout/header/Header";
 import Sidebar from '../../components/layout/Sidebar';
-import ModalAddDepartment from '../modals/ModalN1/ModalAddDepartment';
-import ModalEditDepartment from '../modals/ModalN1/ModalEditDepartment';
 import QLCDapi from '../../config/api/QLCDapi';
-import PaginationQLBP from '../pagination/PaginationN1/PaginationQLBP';
 import PaginationQLCD from '../pagination/PaginationN1/PaginationQLCD';
 
 export default function QuanLyChucDanh() {

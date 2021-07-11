@@ -2,7 +2,6 @@ import React, { Suspense, useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-import AvatarUser from '../../../assets/icons/user-circle-regular.svg';
 import QLNVapi from '../../../config/api/QLNVapi';
 import QLBPapi from '../../../config/api/QLBPapi';
 import QLCDapi from '../../../config/api/QLCDapi';

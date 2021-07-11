@@ -3,7 +3,6 @@ import "../../pagination/pagination.css";
 import ModalEditRole from "../../modals/ModalN1/ModalEditRole";
 import QLNQapi from "../../../config/api/QLNQapi";
 import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
-import ModalAddDepartment from "../../modals/ModalN1/ModalAddDepartment";
 import ModalAddRole from "../../modals/ModalN1/ModalAddRole";
 import IconSearch from '../../../assets/icons/search-icon.svg';
 
@@ -47,7 +46,7 @@ function PaginationQLNQ(props) {
   }, [search, nhomquyenId]);
 
   const [currentPage, setcurrentPage] = useState(1);
-  const [itemsPerPage, setitemsPerPage] = useState(5);
+  const [itemsPerPage, setitemsPerPage] = useState(7);
 
   const [pageNumberLimit, setpageNumberLimit] = useState(5);
   const [maxPageNumberLimit, setmaxPageNumberLimit] = useState(5);
@@ -124,7 +123,7 @@ const renderData = (currentItems) => {
           <td>{index + 1}</td>
           <td>{item.maNhomQuyen}</td>
           <td>{item.tenNhomQuyen}</td>
-          <td>{item.cacChucNang}</td>
+          {/* <td>{item.cacChucNang}</td> */}
           <td>
             <div className="chinh-sua-nv">
               <ModalEditRole
@@ -167,7 +166,7 @@ const renderData = (currentItems) => {
               <th>STT</th>
               <th className="width-180px">Mã nhóm quyền</th>
               <th>Tên nhóm quyền</th>
-              <th className="width-600px">Các chức năng</th>
+              {/* <th className="width-600px">Các chức năng</th> */}
 
               <th>Chỉnh sửa</th>
             </tr>

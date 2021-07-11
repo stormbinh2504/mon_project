@@ -3,9 +3,8 @@ import "../../pagination/pagination.css";
 import { Form, FormControl,Table, Pagination } from 'react-bootstrap';
 import IconSearch from '../../../assets/icons/search-icon.svg';
 import QLNDapi from "../../../config/api/QLNDapi";
-import ModalAddEmployee from "../../modals/ModalN1/ModalAddEmployee";
 import ModalEditUser from "../../modals/ModalN1/ModalEditUser";
-import ModalShowEmployee from "../../modals/ModalN1/ModalShowEmployee";
+
 import ModalAddUser from "../../modals/ModalN1/ModalAddUser";
 
 function PaginationQLND(props) {
@@ -48,7 +47,7 @@ function PaginationQLND(props) {
   }, [search, nguoidungId]);
 
   const [currentPage, setcurrentPage] = useState(1);
-  const [itemsPerPage, setitemsPerPage] = useState(5);
+  const [itemsPerPage, setitemsPerPage] = useState(7);
 
   const [pageNumberLimit, setpageNumberLimit] = useState(5);
   const [maxPageNumberLimit, setmaxPageNumberLimit] = useState(5);
@@ -178,7 +177,7 @@ const renderData = (currentItems) => {
         <div className="content-func col-right">
           <div className="header-content ">
             <div className="find">
-              <input type="text" placeholder="Tìm tên nhân viên" onChange={(e) => setSearch(e.target.value)}/>
+              <input type="text" placeholder="Tìm tên username" onChange={(e) => setSearch(e.target.value)}/>
               <div className="img-search">
                   <img src={IconSearch} alt="" />
                 </div>
